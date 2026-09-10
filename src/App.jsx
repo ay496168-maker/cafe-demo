@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import ReservationCTA from './components/ReservationCTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import FloatingMapButton from './components/FloatingMapButton';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <FloatingMapButton />
     </>
   );
 }
