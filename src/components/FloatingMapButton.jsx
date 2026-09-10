@@ -11,7 +11,7 @@ export default function FloatingMapButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Open in Google Maps"
-      className="fixed bottom-24 right-6 z-40 w-14 h-14 bg-[#2C1A0E] text-[#B8935A] rounded-full shadow-lg flex items-center justify-center hover:bg-[#B8935A] hover:text-white transition-colors duration-300 group border-[1.5px] border-[#B8935A]"
+      className="fixed bottom-24 right-6 z-40 w-14 h-14 bg-[#2C1A0E] text-[#B8935A] rounded-full shadow-lg flex items-center justify-center hover:bg-[#B8935A] hover:text-white transition-colors duration-300 group border-[1.5px] border-[#B8935A] outline-none focus:outline-none"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 2.2, duration: 0.4, type: 'spring', stiffness: 200, damping: 18 }}
