@@ -8,7 +8,7 @@ export default function Menu() {
   const active = MENU_CATEGORIES.find((c) => c.id === activeCategory);
 
   return (
-    <section id="menu" className="py-28 bg-[#FAF6F1]">
+    <section id="menu" className="py-16 md:py-28 bg-[#FAF6F1]">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <FadeInSection className="text-center mb-12">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-4 font-medium">

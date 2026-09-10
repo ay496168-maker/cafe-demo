@@ -9,13 +9,13 @@ export const CAFE_CONFIG = {
   description: "Specialty coffee, fresh pastries and warm conversations — made with care in the heart of the city.",
 
   // ── Contact ────────────────────────────────────────────────────────────────
-  phone: "[CAFE PHONE]",           // e.g. "+91 98765 43210"
-  email: "[CAFE EMAIL]",           // e.g. "hello@beanandbloom.in"
-  address: "[CAFE ADDRESS]",       // e.g. "12 MG Road, Koramangala, Bengaluru 560034"
+  phone: "+91 93410 55790",
+  email: "ayush.insta.yt@gmail.com",
+  address: "Plot 14, Tonk Road, Jaipur, Rajasthan 302015",
 
   // ── WhatsApp — digits only, no + or spaces ─────────────────────────────────
   // e.g. "919876543210" for an Indian number +91 98765 43210
-  whatsapp: "[CAFE WHATSAPP NUMBER]",
+  whatsapp: "919341055790",
 
   // ── Social links — replace # with real profile URLs ────────────────────────
   instagram: "#",
@@ -25,10 +25,10 @@ export const CAFE_CONFIG = {
   // ── Map — replace both values with real cafe location ──────────────────────
   // For the iframe embed src, generate from: maps.google.com > Share > Embed
   // Leave mapSrc as empty string "" to hide the iframe and show only the button.
-  mapSrc: "",
+  mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1579425890556!2d75.78457631504449!3d26.889437983142695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5c4a1f4e6f3%3A0x9f5c6c4a1f4e6f3!2sTonk%20Road%2C%20Jaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   // googleMapsUrl — used for "Open in Google Maps" and "Get Directions" buttons
   // Format: https://maps.google.com/?q=YOUR+ADDRESS+HERE
-  googleMapsUrl: "https://maps.google.com/",
+  googleMapsUrl: "https://maps.google.com/?q=Plot+14+Tonk+Road+Jaipur+Rajasthan+302015",
 };
 
 // =============================================================================

@@ -47,7 +47,7 @@ export default function Hero() {
 
         <motion.h1
           variants={stagger.item}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[88px] font-light leading-[1.1] mb-7"
+          className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-[88px] font-light leading-[1.1] mb-6"
         >
           Crafted Coffee.
           <br />

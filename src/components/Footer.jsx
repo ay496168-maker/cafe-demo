@@ -107,14 +107,14 @@ export default function Footer() {
               Contact
             </p>
             <ul className="space-y-3 text-sm">
-              <li className="leading-relaxed text-white/40">{CAFE_CONFIG.address}</li>
+              <li className="leading-relaxed text-white/50 pr-4">{CAFE_CONFIG.address}</li>
               <li>
-                <a href={`tel:${CAFE_CONFIG.phone}`} className="hover:text-white transition-colors duration-200">
+                <a href={`tel:${CAFE_CONFIG.phone}`} className="hover:text-white transition-colors duration-200 break-all">
                   {CAFE_CONFIG.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${CAFE_CONFIG.email}`} className="hover:text-white transition-colors duration-200">
+                <a href={`mailto:${CAFE_CONFIG.email}`} className="hover:text-white transition-colors duration-200 break-all">
                   {CAFE_CONFIG.email}
                 </a>
               </li>
@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.07] pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="border-t border-white/[0.07] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
           <p className="text-xs text-white/20">
             © {new Date().getFullYear()} {CAFE_CONFIG.name} {CAFE_CONFIG.tagline}. All rights reserved.
           </p>

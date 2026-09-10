@@ -3,7 +3,7 @@ import FadeInSection from './FadeInSection';
 
 export default function ReservationCTA() {
   return (
-    <section className="relative py-40 overflow-hidden">
+    <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
       {/* Background with slow scale */}
       <motion.div
         className="absolute inset-0"
@@ -26,7 +26,7 @@ export default function ReservationCTA() {
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#C8A882] mb-5 font-medium">
             We're Ready For You
           </p>
-          <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-tight mb-10">
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 md:mb-10">
             Your Table
             <br />
             <em className="not-italic italic text-[#C8A882]">Is Waiting.</em>

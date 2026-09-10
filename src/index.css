@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,12 @@ body {
   background-color: var(--warm-white);
   color: var(--espresso);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Prevent any section from causing horizontal scroll */
+section {
+  overflow-x: hidden;
 }
 
 .font-serif {

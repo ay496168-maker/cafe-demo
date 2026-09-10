@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { CAFE_CONFIG, OPENING_HOURS, TIME_SLOTS, GUEST_OPTIONS } from '../data/content';
 import { validateReservation, openWhatsAppReservation } from '../services/reservationService';
@@ -42,17 +42,17 @@ export default function Contact() {
   const fc = (n) => errors[n] ? inputErrorClass : inputClass;
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <FadeInSection className="text-center mb-16">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-4 font-medium">Find Us</p>
           <h2 className="font-serif text-4xl md:text-5xl text-[#2C1A0E]">Visit &amp; Connect</h2>
         </FadeInSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-20">
           {/* LEFT - Info */}
           <FadeInSection direction="right">
-            <div className="space-y-10">
+            <div className="space-y-8 md:space-y-10">
               <div className="space-y-5">
                 {[
                   { Icon: MapPin, label: 'Address', value: CAFE_CONFIG.address, href: null },
@@ -106,7 +106,7 @@ export default function Contact() {
 
           {/* RIGHT - Reservation form */}
           <FadeInSection direction="left" delay={0.15}>
-            <div className="bg-[#FAF6F1] rounded-2xl p-8 border border-[#EDE4D8]">
+            <div className="bg-[#FAF6F1] rounded-2xl p-6 md:p-8 border border-[#EDE4D8]">
               <div className="mb-6">
                 <h3 className="font-serif text-2xl text-[#2C1A0E] mb-1">Reserve a Table</h3>
                 <p className="text-[#8B7355] text-sm">Fill in your details and we will open WhatsApp with your reservation pre-filled.</p>
@@ -188,25 +188,39 @@ export default function Contact() {
         </div>
 
         {/* Map */}
-        <FadeInSection delay={0.2} className="mt-14">
+        <FadeInSection delay={0.2} className="mt-14 lg:mt-20">
           {CAFE_CONFIG.mapSrc ? (
-            <div className="rounded-2xl overflow-hidden shadow-sm h-64 md:h-80">
-              <iframe src={CAFE_CONFIG.mapSrc} width="100%" height="100%" style={{ border: 0 }}
+            <div className="relative rounded-3xl overflow-hidden shadow-xl group h-80 md:h-[450px]">
+              {/* Subtle tint overlay that disappears on hover */}
+              <div className="absolute inset-0 bg-[#2C1A0E]/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10" />
+              
+              <iframe src={CAFE_CONFIG.mapSrc} width="100%" height="100%" 
+                style={{ border: 0, filter: 'contrast(1.02) sepia(0.2) hue-rotate(-10deg)' }}
                 allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full transition-transform duration-700 group-hover:scale-[1.03]"
                 title={`${CAFE_CONFIG.name} Location Map`} />
+                
+              {/* Floating Glassmorphism Card */}
+              <div className="absolute bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-lg z-20 md:max-w-[300px] border border-white/50 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-[#FAF6F1] flex items-center justify-center shrink-0">
+                    <MapPin size={14} className="text-[#B8935A]" strokeWidth={2} />
+                  </div>
+                  <h4 className="font-serif text-[17px] text-[#2C1A0E] font-medium">Find us here</h4>
+                </div>
+                <p className="text-[13px] text-[#8B7355] leading-relaxed mb-4 pl-11">{CAFE_CONFIG.address}</p>
+                <a href={CAFE_CONFIG.googleMapsUrl} target="_blank" rel="noopener noreferrer"
+                  className="pl-11 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-[#B8935A] hover:text-[#2C1A0E] transition-colors">
+                  Get Directions &rarr;
+                </a>
+              </div>
             </div>
           ) : (
-            <div className="rounded-2xl bg-[#FAF6F1] border border-[#E8DDD0] h-36 flex flex-col items-center justify-center gap-2">
-              <MapPin size={20} className="text-[#C8A882]" strokeWidth={1.5} />
-              <p className="text-[#8B7355] text-sm text-center px-4">Map will appear here once the cafe address is configured in content.js</p>
+            <div className="rounded-3xl bg-[#FAF6F1] border border-[#E8DDD0] h-48 flex flex-col items-center justify-center gap-2">
+              <MapPin size={24} className="text-[#C8A882]" strokeWidth={1.5} />
+              <p className="text-[#8B7355] text-sm text-center px-4">Map will appear here once configured</p>
             </div>
           )}
-          <div className="mt-4 text-center">
-            <a href={CAFE_CONFIG.googleMapsUrl} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-[#B8935A] hover:text-[#2C1A0E] transition-colors">
-              <MapPin size={12} strokeWidth={1.5} /> Open in Google Maps
-            </a>
-          </div>
         </FadeInSection>
       </div>
     </section>

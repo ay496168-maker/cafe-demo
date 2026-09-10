@@ -7,7 +7,7 @@ const ICON_MAP = { Coffee, ChefHat, Leaf, Flame };
 
 export default function WhyUs() {
   return (
-    <section className="py-28 bg-[#2C1A0E]">
+    <section className="py-16 md:py-24 bg-[#2C1A0E]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <FadeInSection className="text-center mb-20">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-4 font-medium">

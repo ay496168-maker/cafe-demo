@@ -88,7 +88,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section id="gallery" className="py-28 bg-white">
+    <section id="gallery" className="py-16 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <FadeInSection className="text-center mb-16">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[#B8935A] mb-4 font-medium">
@@ -98,11 +98,11 @@ export default function Gallery() {
           </FadeInSection>
 
           {/* Masonry grid */}
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
             {GALLERY_IMAGES.map((img, i) => (
               <motion.button
                 key={img.id}
-                className="break-inside-avoid w-full overflow-hidden rounded-xl group relative block cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B8935A]"
+                className="break-inside-avoid w-full overflow-hidden rounded-xl group relative block cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B8935A] mb-3"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}

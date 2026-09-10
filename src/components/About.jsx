@@ -2,14 +2,14 @@ import FadeInSection from './FadeInSection';
 
 export default function About() {
   return (
-    <section id="about" className="py-28 bg-white overflow-hidden">
+    <section id="about" className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
           {/* Image column */}
           <FadeInSection direction="right">
-            <div className="relative">
-              <div className="overflow-hidden rounded-2xl aspect-[4/5]">
+            <div className="relative mb-6 sm:mb-0">
+              <div className="overflow-hidden rounded-2xl aspect-[4/5] max-w-sm mx-auto lg:max-w-none">
                 <img
                   src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=960&q=80"
                   alt="Bean & Bloom Café — warm and welcoming interior"
@@ -17,10 +17,10 @@ export default function About() {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
               </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-5 -right-5 sm:-bottom-7 sm:-right-7 bg-[#B8935A] text-white rounded-2xl px-7 py-5 shadow-xl">
-                <p className="font-serif text-4xl font-light leading-none">12+</p>
-                <p className="text-[10px] tracking-[0.25em] uppercase mt-1.5 text-white/80">Years of Craft</p>
+              {/* Floating badge — tucked inside on mobile to avoid overflow */}
+              <div className="absolute bottom-4 right-4 sm:-bottom-5 sm:-right-5 bg-[#B8935A] text-white rounded-2xl px-6 py-4 shadow-xl">
+                <p className="font-serif text-3xl font-light leading-none">12+</p>
+                <p className="text-[10px] tracking-[0.2em] uppercase mt-1 text-white/80">Years of Craft</p>
               </div>
             </div>
           </FadeInSection>
